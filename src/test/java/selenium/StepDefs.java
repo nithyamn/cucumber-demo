@@ -15,6 +15,7 @@ import java.net.URL;
 
 public class StepDefs {
     WebDriver driver;
+    DesiredCapabilities caps;
     public static final String USERNAME = System.getenv("BROWSERSTACK_USERNAME");
     public static final String AUTOMATE_KEY = System.getenv("BROWSERSTACK_ACCESS_KEY");
     public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
@@ -23,7 +24,7 @@ public class StepDefs {
     public void open_Browser() throws MalformedURLException {
         //System.setProperty("webdriver.chrome.driver", "/Users/nithyamani/Desktop/chromedrivers/chromedriver83");
         //driver = new ChromeDriver();
-        DesiredCapabilities caps = new DesiredCapabilities();
+        caps = new DesiredCapabilities();
         caps.setCapability("browser", "Chrome");
         caps.setCapability("browser_version", "80.0");
         caps.setCapability("os", "Windows");

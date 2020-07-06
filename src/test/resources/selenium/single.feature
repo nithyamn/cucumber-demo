@@ -1,5 +1,5 @@
 Feature: First Selenium Test
-  @Feature1 @Feature3
+  @Feature1
   Scenario Outline: Google Search - <company>
     Given Open Browser
     When  '<company>' is searched
